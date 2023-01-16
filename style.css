@@ -1,0 +1,133 @@
+.home-logo {
+    font-size: 35px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(253, 191, 180);
+    font-weight: bold;
+    text-shadow: -1px 5px 9px rgba(0, 0, 0, 0.769);
+
+}
+
+.home-logo:hover {
+    font-size: 35px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(253, 191, 180);
+    font-weight: bold;
+    text-shadow: -1px 5px 9px rgba(0, 0, 0, 0.769);
+}
+
+.nav1 {
+    background-color: rgb(217, 107, 88);
+    height: 11%;
+    border-radius: 9px;
+}
+
+.side-bar {
+    background-color: rgb(253, 252, 250);
+
+}
+
+.side-baritems {
+    color: rgb(237, 167, 167);
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    padding-bottom: 5px;
+    border-radius: 8px;
+
+}
+
+.side-baritems:hover {
+    color: rgb(244, 162, 162);
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 21px;
+    background-color: rgba(255, 255, 255, 0.719);
+    padding-bottom: 5px;
+    border-radius: 8px;
+
+}
+
+body {
+    background-color: rgba(255, 240, 223, 0.122);
+}
+
+.btn1 {
+    background-color: rgb(240, 178, 178);
+    border-color: rgb(0, 0, 0);
+    text-align: center;
+    height: 30px;
+    width: 075px;
+
+}
+
+.btn1:hover {
+    background-color: rgba(240, 178, 178, 0.79);
+    border-color: rgb(0, 0, 0);
+}
+
+.footer-basic {
+    padding: 40px 0;
+    background-color: rgba(246, 202, 202, 0.79);
+    color: rgb(127, 161, 127);
+    margin-top: 100%;
+}
+
+.footer-basic ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.footer-basic li {
+    padding: 0 10px;
+}
+
+.footer-basic ul a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.footer-basic ul a:hover {
+    opacity: 1;
+}
+
+.footer-basic .social {
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.footer-basic .social>a {
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    margin: 0 8px;
+    color: inherit;
+    opacity: 0.75;
+}
+
+.footer-basic .social>a:hover {
+    opacity: 0.9;
+}
+
+.footer-basic .copyright {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+    margin-bottom: 0;
+}
+
+
+.cards {
+    margin: auto;
+    margin-top: 30vh;
+}
