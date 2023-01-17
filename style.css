@@ -1,24 +1,17 @@
-.home-logo {
-    font-size: 35px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: rgb(253, 191, 180);
-    font-weight: bold;
-    text-shadow: -1px 5px 9px rgba(0, 0, 0, 0.769);
-
-}
-
+.home-logo,
 .home-logo:hover {
-    font-size: 35px;
+    font-size: 30px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: rgb(253, 191, 180);
     font-weight: bold;
     text-shadow: -1px 5px 9px rgba(0, 0, 0, 0.769);
+
 }
 
 .nav1 {
     background-color: rgb(217, 107, 88);
-    height: 11%;
-    border-radius: 9px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .side-bar {
@@ -130,4 +123,11 @@ body {
 .cards {
     margin: auto;
     margin-top: 30vh;
+}
+
+.ct {
+    margin-left: auto;
+    padding-left: 15em;
+    color: rgb(217, 107, 88);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
