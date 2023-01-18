@@ -20,8 +20,8 @@
 }
 
 .side-baritems {
-    color: rgb(237, 167, 167);
-    font-weight: bold;
+    color: black;
+    font-weight: 500;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
     padding-bottom: 5px;
@@ -30,8 +30,8 @@
 }
 
 .side-baritems:hover {
-    color: rgb(244, 162, 162);
-    font-weight: bold;
+    color: black;
+    font-weight: 500;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 21px;
     background-color: rgba(255, 255, 255, 0.719);
