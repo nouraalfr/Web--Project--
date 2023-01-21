@@ -31,7 +31,6 @@
 
 .side-baritems:hover {
     color: black;
-    font-weight: 500;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 21px;
     background-color: rgba(255, 255, 255, 0.719);
@@ -62,7 +61,7 @@ body {
     padding: 40px 0;
     background-color: rgba(246, 202, 202, 0.79);
     color: rgb(217, 76, 48);
-    margin-top: 100%;
+
 }
 
 .footer-basic ul {
