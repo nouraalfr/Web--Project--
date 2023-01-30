@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
 
     <style>
         .row-1 {
@@ -31,6 +30,12 @@
         .section-2 {
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             text-align: center;
+        }
+
+        .card {
+            width: 18rem;
+            min-width: 18rem;
+            margin-right: 1rem;
         }
     </style>
 </head>
@@ -82,19 +87,19 @@
         <div class="p-4 p-md-5 mb-4 rounded section-1">
             <div class="icons">
                 <div>
-                    <img src="drink-icon.png" alt="" style="
+                    <img src="img/drink-icon.png" alt="" style="
             width: 55px;
             height: 55px;
             margin: auto;
             display: inline-block;
             z-index: -1;">
-                    <img src="foodicon.png" alt="" style="
+                    <img src="img/foodicon.png" alt="" style="
             width: 55px;
             height: 55px;
             margin: auto;
             display: inline-block;
             z-index: -1;">
-                    <img src="coffee-icon.png" alt="" style="
+                    <img src="img/coffee-icon.png" alt="" style="
             width: 55px;
             height: 55px;
             margin: auto;
@@ -109,47 +114,15 @@
                 </div>
             </div>
         </div>
-        <div class="section-2">
-            <div class="container">
-                <h3>
-                    <img src="share.png" alt="" style="display: inline-block; width: 50px; height: 50px;">
-                    Share your review wherever you go
-                </h3>
-            </div>
-        </div>
-        <br>
 
-        <div class="row mb-2">
-            <div class="col-md-6 ">
-                <div
-                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                    <div class="col p-4 d-flex flex-column position-static">
-                        <h3 class="mb-0"><a href="#" style="text-decoration: none; color: black; ">latest
-                                cafes and
-                                restaurants</a></h3>
-                        <div class="mb-1 text-muted crads"></div>
-                        <p class="card-text mb-auto"></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6">
-                <div
-                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                    <div class="col p-4 d-flex flex-column position-static">
-                        <h3 class="mb-0"><a href="#" style="text-decoration: none; color: black; ">trendy
-                                cafes and
-                                restaurants</a></h3>
-                        <p class="card-text mb-auto"></p>
-                    </div>
-
-                </div>
-            </div>
+        <div class="">
+            <h2>Latest Cafes</h2>
+            <div class="d-flex flex-row flex-nowrap overflow-auto" id="latestCafes"></div>
         </div>
     </div>
 
 
-    <div class="footer-basic">
+    <div class="footer-basic mt-5">
         <footer>
             <div class="social">
                 <a href="#"><i class="icon ion-social-instagram"></i></a>
@@ -166,6 +139,43 @@
     </div>
 
     <script src="js/bootstrap.bundle.min.js"></script>
+
+
+
+
+    <script>
+
+        function createCard(img, title, text) {
+            const card = document.createElement('div')
+            card.classList = 'card'
+            const cardImg = document.createElement('img')
+            cardImg.classList = 'card-img-top'
+            cardImg.src = img
+            card.appendChild(cardImg)
+            const cardBody = document.createElement('div')
+            cardBody.classList = 'card-body'
+            const cardTitle = document.createElement('h5')
+            cardTitle.classList = 'card-title'
+            cardTitle.innerText = title
+            const cardText = document.createElement('p')
+            cardText.innerText = text
+            cardBody.appendChild(cardTitle)
+            cardBody.appendChild(cardText)
+            card.appendChild(cardBody)
+            return card
+        }
+
+        fetch('http://localhost:3000/cafes')
+            .then((response) => response.json())
+            .then((data) => {
+                const cafesElement = document.getElementById('latestCafes')
+                data.forEach((cafe) => {
+                    cafesElement.appendChild(createCard(cafe.img, cafe.name, cafe.text))
+                })
+            })
+
+
+    </script>
 </body>
 
 </html>
