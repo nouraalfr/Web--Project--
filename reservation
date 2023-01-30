@@ -8,6 +8,8 @@
    
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style-magnific-popup.css" rel="stylesheet">
+    
+   
     <style>
         body {
             color: rgb(217, 107, 88);
@@ -56,13 +58,14 @@
                       <div class="aligned">
                         <img src="chef.jpg" alt="picture" width="757" height="757">
                       <!--begin register form -->
-                      <form id="register-form" class="contact" action="php/register.php" method="post" ALGIN="right">
-                          
+                      
+                      <form id="register-form" class="contact" action="php/register.php" method="post" ALGIN="right" >
+                       
                         <span>
                           <div class="col-md-6">
                              <p>
                                 <label>full name:
-                              <input class="register-input white-input" required="" name="register_names" placeholder="Full Name" type="text">
+                              <input class="register-input white-input" required="" name="register_names" placeholder="Full Name" type="text" >
                               </label></p>
                               <p>
                                 <label>Phone Number:
@@ -111,6 +114,7 @@
                           <!--end col-md-12-->
                                               
                       </form>
+                    </body>
                       <!--end register form -->
                             </span></div>               
                   </div>
@@ -140,5 +144,10 @@
             <p class="copyright">Riyadh Places © 2023</p>
         </footer>
     </div>
+    <body>
+      <script> form = document.getElementsByTagName("form")[0];
+form.addEventListener("submit", (e) => { e.preventDefault();
+  alert("thank you for booking in riyadh places website!");});</script></br>
+    </body>
       </html>
  
