@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="style.css">
+   
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style-magnific-popup.css" rel="stylesheet">
+   
+    <style>
+        body {
+            color: rgb(217, 107, 88);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+   font-size: 50px;
+   text-align: center;
+        }
+        .aligned {
+            display: flex;
+            align-items: center;
+        }
+          
+        span {
+            padding: 10px;
+        }
+    </style>
+ </head> 
+    <section class="section-white small-padding no-padding-bottom">
+    
+        <!--begin container-->
+        <div class="container"> 
+  
+              <!--begin row-->
+              <div class="row">
+              
+                  <!--begin col-md-6-->
+                  <div class="col-md-6 wow bounceInUp">
+                                      
+                    
+                                      
+                  </div>
+                  <!--end col-md-6-->
+                  
+                  <!--begin col-md-6-->
+                  <div class="col-md-6 text-center register-inner padding-top-30">
+              
+                      <span class="comic-text" >Reservations</span>
+                      
+                      <h2 class="section-title">Online Booking</h2>
+                      
+                      <p >welcome to our blog you can book your reservation here</p>                
+                      
+                      <!--begin success message -->
+                      <p class="register_success_box" style="display:none;">We received your message and you'll hear from us soon. Thank You!</p>
+                      <div class="aligned">
+                        <img src="chef.jpg" alt="picture" width="757" height="757">
+                      <!--begin register form -->                      
+
+                      <form id="register-form" class="contact" action="php/register.php" onsubmit="return validateForm()" method="post" ALGIN="right" >
+                       
+                        <span>
+                          <div class="col-md-6">
+                             <p>
+                                <label>full name:
+                              <input class="register-input white-input"  name="fname" placeholder="Full Name" type="text" >
+                              </label></p>
+                              <p>
+                                <label>Phone Number:
+                              <input class="register-input white-input" name="register_phone" placeholder="Phone Number" type="text">
+                              </label></p>
+
+                             
+                                                         
+                          </div>
+                          
+                          
+                          <div class="col-md-6">
+                          <p><label>E-mail Adress:
+                              <input class="register-input white-input"  name="register_email" placeholder="Email Adress" type="email"></label>
+                              </p><p><label>Seats:
+                              <select class="register-input white-input"  name="register_ticket">
+                                  <option value="">How Many?</option>
+                                  <option value="1 Person">1 Person</option>
+                                  <option value="2 People">2 People</option>
+                                  <option value="3 People">3 People</option>
+                                  <option value="4 People">4 People</option>
+                                  <option value="5 People">5 People</option>
+                                  <option value="6 People">6 People</option>
+                                  <option value="7 People">7 People</option>
+                                  <option value="8 People">8 People</option>
+                                  <option value="9 People">9 People</option>
+                                  <option value="10 People">10 People</option>
+                              </select></label></p>
+                                <p>
+                                    <label>booking Date:
+                                    <input class="register-input white-input"  name="register_date" placeholder="Booking Date" type="text"> </label> 
+                                </p><p><label>Booing Time:
+                              <input class="register-input white-input"  name="register_time" placeholder="Booking Time" type="text"></label>
+                                   
+                                   </p>                       
+                         
+                        </div>
+                          <!--end col-md-6-->
+                  
+                          <!--begin col-md-12-->
+                          <div class="col-md-12">
+                          
+                              <input value="Book Your Table" id="submit-button" class="register-submit" type="submit">
+                                                           
+                          </div>
+                          <!--end col-md-12-->
+                                              
+                      </form>
+                    </body>
+                      <!--end register form -->
+                            </span></div>               
+                  </div>
+                  <!--end col-md-6-->
+                   
+              </div>
+              <!--end row-->
+              
+          </div>
+          <!--end container-->
+          
+      </section>
+      <!--end section-white-->
+      
+    <div class="footer-basic">
+        <footer>
+            <div class="social">
+                <a href="#"><i class="icon ion-social-instagram"></i></a>
+                <a href="#"><i class="icon ion-social-snapchat"></i></a>
+                <a href="#"><i class="icon ion-social-twitter"></i></a>
+                <a href="#"><i class="icon ion-social-facebook"></i></a>
+            </div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="index.html">Home</a></li>
+                <li class="list-inline-item"><a href="#">About</a></li>
+            </ul>
+            <p class="copyright">Riyadh Places © 2023</p>
+        </footer>
+    </div>
+    <body>
+      <script src="java.js"></script>
+    </body>
+      </html>
+ 
