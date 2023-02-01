@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <style>
         .carousel1 {
-            margin-top: -43%;
+
             height: 20rem;
-            width: 80rem;
+            min-width: 100%;
+            background-color: rgb(74, 74, 73);
 
         }
     </style>
@@ -45,10 +46,10 @@
                             <a class="nav-link  side-baritems" aria-current="page" href="index.html">Home</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link side-baritems" href="cafe.html">Cafes</a>
+                            <a class="nav-link side-baritems" href="cafes.html">Cafes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link side-baritems" href="restaurant.html">Restaurants</a>
+                            <a class="nav-link side-baritems" href="restaurants.html">Restaurants</a>
                         </li>
 
                     </ul>
@@ -62,11 +63,36 @@
         </div>
     </nav>
 
-
-    <div class="container mt-5">
-        <h2 id="title"></h2>
-        <img style="width: 200px; height: 200px;" id="img"></img>
-
+    <div id="carouselExampleIndicators" class="carousel slide mt- carousel1">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img id="img" src="" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img id="img" src="" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img id="img" src="" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
 
 
@@ -88,18 +114,14 @@
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script>
-        const urlSearchParams = new URLSearchParams(window.location.search);
-        fetch(`http://localhost:3000/?query=${urlSearchParams.get('name')}`)
-            .then((response) => response.json())
-            .then((data) => {
-                item = data[0]
-                const title = document.getElementById('title')
-                title.innerText = item.name
-                const img = document.getElementById('img')
-                img.src = item.img
-                const text = document.getElementById('text')
-                text.innerText = item.text
-            })
+        /* const urlSearchParams = new URLSearchParams(window.location.search);
+         fetch(`http://localhost:3000/?query=${urlSearchParams.get('name')}`)
+             .then((response) => response.json())
+             .then((data) => {
+                 item = data[0]
+                 const img = document.getElementById('img')
+                 img.src = item.img
+             })*/
     </script>
 </body>
 
