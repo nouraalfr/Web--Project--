@@ -6,49 +6,47 @@ const app = express();
 const port = 3000;
 const client = new MongoClient('mongodb://127.0.0.1');
 const db = client.db('app');
+const coll = db.collection('places');
 
+// Get cafes and restaurants
 app.get('/', async (req, res) => {
-  res.send('Hello!');
-});
-
-// Cafes and resturants
-app.get(/^\/(cafes|resturants)$/, async (req, res) => {
   // Allow all cross origin
   res.header('Access-Control-Allow-Origin', '*');
-  // Get collection name from path
-  const collName = req.params[0];
-  // Get collection object
-  const coll = db.collection(collName);
   // If request has query then use it to filter results
   const filter = {};
-  console.log(req.query);
-  if (req.query.name) {
-    filter.name = req.query.name;
+  if (req.query.type) {
+    filter.type = req.query.type;
+  }
+  if (req.query.query) {
+    filter.$text = { $search: req.query.query };
   }
   if (req.query.rating) {
     filter.rating = Number(req.query.rating);
   }
+  // Set limit
+  let limit = 0;
+  if (req.query.limit) {
+    limit = Number(req.query.limit);
+  }
   // Always sort by latest
-  const cursor = coll.find(filter).sort({ created_at: -1 });
+  const cursor = coll.find(filter).sort({ created_at: -1 }).limit(limit);
   // Get results and return to user
   const results = await cursor.toArray();
   res.send(results);
 });
 
 app.listen(port, async () => {
-  await db.dropDatabase();
-  await insertItems('cafes');
-  await insertItems('resturants');
-  console.log(`Example app listening on port ${port}`);
+  // delete database at start
+  //await coll.drop();
+  // create index for name field so we can search
+  await coll.createIndex({ name: 'text' });
+  await insertItems();
+  console.log(`Backend listening on port ${port}`);
 });
 
-async function insertItems(type) {
-  // Return if collection exists
-  const collInfo = await db.listCollections({ name: type }).next();
-  if (collInfo) return;
+async function insertItems() {
   // Read data from file
-  const data = JSON.parse(fs.readFileSync('data/' + type + '.json'));
+  const data = JSON.parse(fs.readFileSync('data.json'));
   // Insert data into mongodb
-  const coll = db.collection(type);
-  coll.insertMany(data);
+  await coll.insertMany(data);
 }

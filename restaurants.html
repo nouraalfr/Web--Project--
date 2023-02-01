@@ -1,7 +1,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,24 +8,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-
     <style>
-        .row-1 {
-            text-align: center;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            color: rgb(0, 0, 0);
-        }
-
-        .icons {
-            text-align: center;
-            margin-top: 50px;
-        }
-
-        .section-1 {
-            padding: 10px;
-            background-color: rgba(251, 178, 178, 0.171);
-        }
-
         .card {
             width: 18rem;
             min-width: 18rem;
@@ -36,8 +18,6 @@
 </head>
 
 <body>
-
-
     <nav class="navbar navbar-dark nav1 mb-3 ">
         <div class="container-fluid">
             <a class="navbar-brand home-logo" href="index.html">Riyadh Places</a>
@@ -79,55 +59,16 @@
         </div>
     </nav>
 
+    <div class="container mt-5">
+        <form onsubmit="search(); return false;" class="d-flex mb-5">
+            <input type="text" class="form-control me-2" placeholder="Search" id="searchBar">
+            <button class="btn btn-primary" type="submit">Search</button>
+        </form>
 
-    <div class="container">
-        <div class="p-4 p-md-5 mb-5 rounded section-1">
-            <div class="icons">
-                <div>
-                    <img src="img/drink-icon.png" alt="" style="
-            width: 55px;
-            height: 55px;
-            margin: auto;
-            display: inline-block;
-            z-index: -1;">
-                    <img src="img/foodicon.png" alt="" style="
-            width: 55px;
-            height: 55px;
-            margin: auto;
-            display: inline-block;
-            z-index: -1;">
-                    <img src="img/coffee-icon.png" alt="" style="
-            width: 55px;
-            height: 55px;
-            margin: auto;
-            display: inline-block;
-            z-index: -1;">
-                </div>
-                <br>
-                <div>
-                    <h3 class="row-1">Riyadh Places is a blog about restaurants and cafes
-                        <br>Here you can find all the reviews about latest and trendy cafes and restaurants!
-                    </h3>
-                </div>
-            </div>
-        </div>
+        <div id="album" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 
-        <div class="mb-5">
-            <h2>Top Places</h2>
-            <div class="d-flex flex-row flex-nowrap overflow-auto" id="topPlaces"></div>
-        </div>
-        <div class="mb-5">
-            <h2>Latest Cafes</h2>
-            <div class="d-flex flex-row flex-nowrap overflow-auto" id="latestCafes"></div>
-        </div>
-        <div class="mb-5">
-            <h2>Latest Restaurants</h2>
-            <div class="d-flex flex-row flex-nowrap overflow-auto" id="latestRestaurants"></div>
         </div>
     </div>
-
-
-
 
 
     <div class="footer-basic mt-5">
@@ -140,25 +81,20 @@
             </div>
             <ul class="list-inline">
                 <li class="list-inline-item"><a href="index.html">Home</a></li>
-
             </ul>
             <p class="copyright">Riyadh Places © 2023</p>
         </footer>
     </div>
 
     <script src="js/bootstrap.bundle.min.js"></script>
-
     <script>
         function createCard(img, title, text) {
             const card = document.createElement('div')
             card.classList = 'card'
-            const a = document.createElement('a')
-            a.href = `/details.html?name=${title}`
             const cardImg = document.createElement('img')
             cardImg.classList = 'card-img-top'
             cardImg.src = img
-            a.appendChild(cardImg)
-            card.appendChild(a)
+            card.appendChild(cardImg)
             const cardBody = document.createElement('div')
             cardBody.classList = 'card-body'
             const cardTitle = document.createElement('h5')
@@ -172,31 +108,25 @@
             return card
         }
 
-
-        fetch('http://localhost:3000/?rating=5&limit=10')
-            .then((response) => response.json())
-            .then((data) => {
-                const cafesElement = document.getElementById('topPlaces')
-                data.forEach((item) => {
-                    cafesElement.appendChild(createCard(item.img, item.name, item.text))
+        function search() {
+            const query = document.getElementById("searchBar").value
+            fetch(`http://localhost:3000/?type=restaurant&query=${query}`)
+                .then((response) => response.json())
+                .then((data) => {
+                    const album = document.getElementById('album')
+                    album.innerHTML = ""
+                    data.forEach((item) => {
+                        album.appendChild(createCard(item.img, item.name, item.text))
+                    })
                 })
-            })
+        }
 
-        fetch('http://localhost:3000/?type=cafe&limit=10')
+        fetch(`http://localhost:3000/?type=restaurant`)
             .then((response) => response.json())
             .then((data) => {
-                const cafesElement = document.getElementById('latestCafes')
+                const album = document.getElementById('album')
                 data.forEach((item) => {
-                    cafesElement.appendChild(createCard(item.img, item.name, item.text))
-                })
-            })
-
-        fetch('http://localhost:3000/?type=restaurant&limit=10')
-            .then((response) => response.json())
-            .then((data) => {
-                const cafesElement = document.getElementById('latestRestaurants')
-                data.forEach((item) => {
-                    cafesElement.appendChild(createCard(item.img, item.name, item.text))
+                    album.appendChild(createCard(item.img, item.name, item.text))
                 })
             })
     </script>

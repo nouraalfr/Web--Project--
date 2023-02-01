@@ -1,3 +1,27 @@
+html,
+body {
+    height: 100%;
+}
+
+/* body as grid so footer is always at the bottom */
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+body>.navbar {
+    grid-row: 1;
+}
+
+body>.container {
+    grid-row: 2;
+}
+
+body>.footer-basic {
+    grid-row: 3;
+}
+
+
 .home-logo,
 .home-logo:hover {
     font-size: 30px;
@@ -5,7 +29,6 @@
     color: rgb(253, 191, 180);
     font-weight: bold;
     text-shadow: -1px 5px 9px rgba(0, 0, 0, 0.769);
-
 }
 
 .nav1 {
@@ -16,7 +39,6 @@
 
 .side-bar {
     background-color: rgb(253, 252, 250);
-
 }
 
 .side-baritems {
@@ -36,7 +58,6 @@
     background-color: rgba(255, 255, 255, 0.719);
     padding-bottom: 5px;
     border-radius: 8px;
-
 }
 
 body {
@@ -117,12 +138,6 @@ body {
     font-size: 13px;
     color: rgb(140, 138, 138);
     margin-bottom: 0;
-}
-
-
-.cards {
-    margin: auto;
-    margin-top: 30vh;
 }
 
 .ct {

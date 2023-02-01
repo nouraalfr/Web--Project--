@@ -1,0 +1,122 @@
+[
+    {
+        "name": "Starbucks",
+        "type": "cafe",
+        "rating": 1,
+        "created_at": "2022/01/10",
+        "img": "img/Starbucks.png",
+        "text": "Starbucks cafe"
+    },
+    {
+        "name": "BTW",
+        "type": "cafe",
+        "rating": 4,
+        "created_at": "2023/01/09",
+        "img": "img/BTW.jpg",
+        "text": "BTW"
+    },
+    {
+        "name": "Half Million",
+        "type": "cafe",
+        "rating": 4,
+        "created_at": "2023/01/06",
+        "img": "img/Half Millon.jpg",
+        "text": "Half Million"
+    },
+    {
+        "name": "Dunkin' Dounts",
+        "type": "cafe",
+        "rating": 5,
+        "created_at": "2023/01/07",
+        "img": "img/dunkin.png",
+        "text": "dunkin' Dounts"
+    },
+    {
+        "name": "Third",
+        "type": "cafe",
+        "rating": 2,
+        "created_at": "2023/01/19",
+        "img": "img/third.png",
+        "text": "Third"
+    },
+    {
+        "name": "Coyard",
+        "type": "cafe",
+        "rating": 5,
+        "created_at": "2023/01/08",
+        "img": "img/coyard.png",
+        "text": "Coyard"
+    },
+    {
+        "name": "777 Burger",
+        "type": "restaurant",
+        "rating": 4,
+        "created_at": "2023/01/02",
+        "img": "img/Logo-Burger-777.png",
+        "text": "777"
+    },
+    {
+        "name": "McDonalds",
+        "type": "restaurant",
+        "rating": 5,
+        "created_at": "2023/01/09",
+        "img": "img/mcdonalds-png-logo-simple-m-1.png",
+        "text": "McDonalds"
+    },
+    {
+        "name": "ovvi",
+        "type": "restaurant",
+        "rating": 5,
+        "created_at": "2023/01/09",
+        "img": "img/ovvi.png",
+        "text": "Ovvi"
+    },
+    {
+        "name": "Steak House",
+        "type": "restaurant",
+        "rating": 5,
+        "created_at": "2023/01/11",
+        "img": "img/steakhou.png",
+        "text": "Steak House"
+    },
+    {
+        "name": "A.O.K",
+        "type": "restaurant",
+        "rating": 4,
+        "created_at": "2023/01/10",
+        "img": "img/aok.png",
+        "text": "A.O.K"
+    },
+    {
+        "name": "Myazu",
+        "type": "restaurant",
+        "rating": 4,
+        "created_at": "2023/01/18",
+        "img": "img/myazu.png",
+        "text": "Myazu"
+    },
+    {
+        "name": "Section-B",
+        "type": "restaurant",
+        "rating": 3,
+        "created_at": "2023/01/19",
+        "img": "img/sectionb.jpeg",
+        "text": "Section-B"
+    },
+    {
+        "name": "Dominos Pizza",
+        "type": "restaurant",
+        "rating": 5,
+        "created_at": "2023/01/20",
+        "img": "img/dominos_logo.jpeg",
+        "text": "Dominos Pizza"
+    },
+    {
+        "name": "Nooa",
+        "type": "restaurant",
+        "rating": 2,
+        "created_at": "2023/01/20",
+        "img": "img/nooa.jpeg",
+        "text": "Nooa"
+    }
+]

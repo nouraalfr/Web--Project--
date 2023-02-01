@@ -1,31 +1,27 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurants</title>
+    <title>Riyadh Places</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <style>
-        .ct {
-            margin-left: auto;
-            padding-left: 15em;
-            color: rgb(217, 107, 88);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+        .carousel1 {
+            margin-top: -43%;
+            height: 20rem;
+            width: 80rem;
 
+        }
     </style>
 </head>
 
 <body>
 
 
-
-
-    <nav class="navbar navbar-dark  fixed-top nav1">
+    <nav class="navbar navbar-dark nav1 mb-3 ">
         <div class="container-fluid">
             <a class="navbar-brand home-logo" href="index.html">Riyadh Places</a>
             <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas"
@@ -66,48 +62,15 @@
         </div>
     </nav>
 
-    <section>
-        <div class="ct">
-            <br><br><br><br>
+
+    <div class="container mt-5">
+        <h2 id="title"></h2>
+        <img style="width: 200px; height: 200px;" id="img"></img>
+
+    </div>
 
 
-
-            <div class="card" style="width: 18rem;">
-                <img src="img/Logo-Burger-777.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">777burger</h5>
-                    <p class="card-text">A Saudi company with an international reputation that achieves international
-                        standards with a local branch</p>
-                    <a href="https://777burger.com/" class="btn btn-primary">visit us</a>
-                </div>
-            </div>
-            <br>
-
-            <div class="card" style="width: 18rem;">
-                <img src="img/dominos_logo.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Domino's Pizza</h5>
-                    <p class="card-text">We choose the best for you, to offer#TheBest_pizza</p>
-                    <a href="https://www.dominos.sa/en/" class="btn btn-primary">visit us</a>
-                </div>
-            </div>
-            <br>
-            <div class="card" style="width: 18rem;">
-                <img src="img/mcdonalds-png-logo-simple-m-1.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">McDonald's</h5>
-                    <p class="card-text">McDonald's is one of the largest chains of fast food restaurants in the world !
-                    </p>
-                    <a href="https://www.mcdonalds.com/sa/en-sa/riyadh/full-menu.html" class="btn btn-primary">visit
-                        us</a>
-                </div>
-            </div>
-            <br>
-        </div>
-
-    </section>
-
-    <div class="footer-basic">
+    <div class="footer-basic mt-5">
         <footer>
             <div class="social">
                 <a href="#"><i class="icon ion-social-instagram"></i></a>
@@ -117,13 +80,27 @@
             </div>
             <ul class="list-inline">
                 <li class="list-inline-item"><a href="index.html">Home</a></li>
+
             </ul>
             <p class="copyright">Riyadh Places © 2023</p>
         </footer>
     </div>
 
-
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        const urlSearchParams = new URLSearchParams(window.location.search);
+        fetch(`http://localhost:3000/?query=${urlSearchParams.get('name')}`)
+            .then((response) => response.json())
+            .then((data) => {
+                item = data[0]
+                const title = document.getElementById('title')
+                title.innerText = item.name
+                const img = document.getElementById('img')
+                img.src = item.img
+                const text = document.getElementById('text')
+                text.innerText = item.text
+            })
+    </script>
 </body>
 
 </html>

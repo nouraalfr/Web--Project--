@@ -1,31 +1,24 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Riyadh Places</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <style>
-        .ct {
-            margin-left: auto;
-            padding-left: 15em;
-            color: rgb(217, 107, 88);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        .card {
+            width: 18rem;
+            min-width: 18rem;
+            margin-right: 1rem;
         }
-
     </style>
 </head>
 
 <body>
-
-
-
-
-    <nav class="navbar navbar-dark  fixed-top nav1">
+    <nav class="navbar navbar-dark nav1 mb-3 ">
         <div class="container-fluid">
             <a class="navbar-brand home-logo" href="index.html">Riyadh Places</a>
             <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas"
@@ -49,10 +42,10 @@
                             <a class="nav-link  side-baritems" aria-current="page" href="index.html">Home</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link side-baritems" href="cafe.html">Cafes</a>
+                            <a class="nav-link side-baritems" href="cafes.html">Cafes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link side-baritems" href="restaurant.html">Restaurants</a>
+                            <a class="nav-link side-baritems" href="restaurants.html">Restaurants</a>
                         </li>
 
                     </ul>
@@ -66,49 +59,20 @@
         </div>
     </nav>
 
-    <section>
-        <div class="ct">
-            <br><br><br><br>
 
+    <div class="container mt-5">
+        <form onsubmit="searchCafes(); return false;" class="d-flex mb-5">
+            <input type="text" class="form-control me-2" placeholder="Search" id="searchBar">
+            <button class="btn btn-primary" type="submit">Search</button>
+        </form>
 
+        <div id="album" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 
-            <div class="card" style="width: 18rem;">
-                <img src="img/Starbucks.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Starbucks</h5>
-                    <p class="card-text">To inspire and nurture the human spirit - one person, one cup and one
-                        neighborhood at a time.</p>
-                    <a href="https://www.starbucks.com/" class="btn btn-primary">visit us</a>
-                </div>
-            </div>
-            <br>
-
-            <div class="card" style="width: 18rem;">
-                <img src="img/Half Millon.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">1/2 Millon</h5>
-                    <p class="card-text">Half Million Saudi Riyal was the seed money which gave birth to our well-known
-                        & beloved 1/2M Coffee. The story began in Riyadh.</p>
-                    <a href="https://halfm.sa/" class="btn btn-primary">visit us</a>
-                </div>
-            </div>
-            <br>
-            <div class="card" style="width: 18rem;">
-                <img src="img/BTW.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">BTW</h5>
-                    <p class="card-text">A perfect espresso morning includes a
-                        rich #coffee from BTW!</p>
-                    <a href="https://www.instagram.com/btw.sa/?utm_medium=copy_link" class="btn btn-primary">visit
-                        us</a>
-                </div>
-            </div>
-            <br>
         </div>
+    </div>
 
-    </section>
 
-    <div class="footer-basic">
+    <div class="footer-basic mt-5">
         <footer>
             <div class="social">
                 <a href="#"><i class="icon ion-social-instagram"></i></a>
@@ -124,8 +88,50 @@
         </footer>
     </div>
 
-
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        function createCard(img, title, text) {
+            const card = document.createElement('div')
+            card.classList = 'card'
+            const cardImg = document.createElement('img')
+            cardImg.classList = 'card-img-top'
+            cardImg.src = img
+            card.appendChild(cardImg)
+            const cardBody = document.createElement('div')
+            cardBody.classList = 'card-body'
+            const cardTitle = document.createElement('h5')
+            cardTitle.classList = 'card-title'
+            cardTitle.innerText = title
+            const cardText = document.createElement('p')
+            cardText.innerText = text
+            cardBody.appendChild(cardTitle)
+            cardBody.appendChild(cardText)
+            card.appendChild(cardBody)
+            return card
+        }
+
+        function searchCafes() {
+            const query = document.getElementById("searchBar").value
+            fetch(`http://localhost:3000/?type=cafe&query=${query}`)
+                .then((response) => response.json())
+                .then((data) => {
+                    const album = document.getElementById('album')
+                    album.innerHTML = ""
+                    data.forEach((item) => {
+                        album.appendChild(createCard(item.img, item.name, item.text))
+                    })
+                })
+        }
+
+        fetch(`http://localhost:3000/?type=cafe`)
+            .then((response) => response.json())
+            .then((data) => {
+                const album = document.getElementById('album')
+                data.forEach((item) => {
+                    album.appendChild(createCard(item.img, item.name, item.text))
+                })
+            })
+    </script>
 </body>
 
 </html>
