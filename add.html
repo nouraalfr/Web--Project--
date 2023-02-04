@@ -1,6 +1,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,24 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
     <style>
+        .row-1 {
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: rgb(0, 0, 0);
+        }
+
+        .icons {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .section-1 {
+            padding: 10px;
+            background-color: rgba(251, 178, 178, 0.171);
+        }
+
         .card {
             width: 18rem;
             min-width: 18rem;
@@ -19,6 +37,8 @@
 </head>
 
 <body>
+
+
     <nav class="navbar navbar-dark nav1 mb-3">
         <div class="container-fluid">
             <a class="navbar-brand home-logo" href="index.html">Riyadh Places</a>
@@ -62,16 +82,33 @@
         </div>
     </nav>
 
-    <div class="container mt-5">
-        <form onsubmit="searchCafes(); return false;" class="d-flex mb-5">
-            <input type="text" class="form-control me-2" placeholder="Search" id="searchBar">
-            <button class="btn btn-primary" type="submit">Search</button>
+
+    <div class="container">
+        <form onsubmit="add(); return false;">
+            <div class="mb-3">
+                <label class="form-label">Type</label>
+                <select id="type" class="form-select" required>
+                    <option selected disabled>Type menu</option>
+                    <option value="cafe">Cafe</option>
+                    <option value="restaurant">Restaurant</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Name</label>
+                <input id="name" type="text" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Images</label>
+                <input id="logo" type="url" class="form-control mb-1" placeholder="Logo of the place" required>
+                <input id="img1" type="url" class="form-control mb-1" placeholder="Photo of the place" required>
+                <input id="img2" type="url" class="form-control mb-1" placeholder="Photo of the place" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
         </form>
-
-        <div id="album" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-
-        </div>
     </div>
+
 
 
     <div class="footer-basic mt-5">
@@ -91,51 +128,24 @@
     </div>
 
     <script src="js/bootstrap.bundle.min.js"></script>
+
     <script>
-        function createCard(logo, title, text) {
-            const card = document.createElement('div')
-            card.classList = 'card'
-            const a = document.createElement('a')
-            a.href = `/details.html?name=${title}`
-            const cardImg = document.createElement('img')
-            cardImg.classList = 'card-img-top'
-            cardImg.src = logo
-            a.appendChild(cardImg)
-            card.appendChild(a)
-            const cardBody = document.createElement('div')
-            cardBody.classList = 'card-body'
-            const cardTitle = document.createElement('h5')
-            cardTitle.classList = 'card-title'
-            cardTitle.innerText = title
-            const cardText = document.createElement('p')
-            cardText.innerText = text
-            cardBody.appendChild(cardTitle)
-            cardBody.appendChild(cardText)
-            card.appendChild(cardBody)
-            return card
-        }
 
-        function searchCafes() {
-            const query = document.getElementById("searchBar").value
-            fetch(`api?type=cafe&query=${query}`)
-                .then((response) => response.json())
-                .then((data) => {
-                    const album = document.getElementById('album')
-                    album.innerHTML = ""
-                    data.forEach((item) => {
-                        album.appendChild(createCard(item.logo, item.name, item.likes + ' Likes'))
-                    })
-                })
-        }
-
-        fetch(`api?type=cafe`)
-            .then((response) => response.json())
-            .then((data) => {
-                const album = document.getElementById('album')
-                data.forEach((item) => {
-                    album.appendChild(createCard(item.logo, item.name, item.likes + ' Likes'))
-                })
+        function add() {
+            const type = document.getElementById('type').value
+            const name = document.getElementById('name').value
+            const logo = document.getElementById('logo').value
+            const img1 = document.getElementById('img1').value
+            const img2 = document.getElementById('img2').value
+            fetch('api/add', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({type, name, logo, img1, img2})
+            }).then(() => {
+                location.replace('/')
             })
+        }
+
     </script>
 </body>
 

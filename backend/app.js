@@ -67,6 +67,30 @@ app.post('/api/review', async (req, res) => {
   res.send('success');
 });
 
+app.post('/api/add', async (req, res) => {
+  try {
+    const name = req.body.name;
+    const type = req.body.type;
+    const logo = req.body.logo;
+    const img1 = req.body.img1;
+    const img2 = req.body.img2;
+    await coll.insertOne({
+      name,
+      type,
+      created_at: new Date().toJSON().slice(0, 10),
+      likes: 0,
+      logo,
+      img1,
+      img2,
+      reviews: []
+    });
+  } catch {
+    res.send('invalid request');
+    return;
+  }
+  res.send('success');
+});
+
 app.listen(port, async () => {
   // delete database at start
   try {

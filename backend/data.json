@@ -2,7 +2,7 @@
     {
         "name": "Starbucks",
         "type": "cafe",
-        "created_at": "2022/01/10",
+        "created_at": "2022-01-10",
         "likes": 0,
         "logo": "img/Starbucks.png",
         "img1": "https://payload.cargocollective.com/1/12/414523/13850790/6N9A8511_s_1340_c.jpg",
@@ -12,7 +12,7 @@
     {
         "name": "BTW",
         "type": "cafe",
-        "created_at": "2023/01/09",
+        "created_at": "2023-01-09",
         "likes": 0,
         "logo": "img/BTW.jpg",
         "img1": "",
@@ -22,7 +22,7 @@
     {
         "name": "Half Million",
         "type": "cafe",
-        "created_at": "2023/01/06",
+        "created_at": "2023-01-06",
         "likes": 0,
         "logo": "img/Half Millon.jpg",
         "img1": "",
@@ -32,7 +32,7 @@
     {
         "name": "Dunkin' Dounts",
         "type": "cafe",
-        "created_at": "2023/01/07",
+        "created_at": "2023-01-07",
         "likes": 0,
         "logo": "img/dunkin.png",
         "img1": "",
@@ -42,7 +42,7 @@
     {
         "name": "Third",
         "type": "cafe",
-        "created_at": "2023/01/19",
+        "created_at": "2023-01-19",
         "likes": 0,
         "logo": "img/third.png",
         "img1": "",
@@ -52,7 +52,7 @@
     {
         "name": "Coyard",
         "type": "cafe",
-        "created_at": "2023/01/08",
+        "created_at": "2023-01-08",
         "likes": 0,
         "logo": "img/coyard.png",
         "img1": "",
@@ -62,7 +62,7 @@
     {
         "name": "777 Burger",
         "type": "restaurant",
-        "created_at": "2023/01/02",
+        "created_at": "2023-01-02",
         "likes": 0,
         "logo": "img/Logo-Burger-777.png",
         "img1": "",
@@ -72,7 +72,7 @@
     {
         "name": "McDonalds",
         "type": "restaurant",
-        "created_at": "2023/01/09",
+        "created_at": "2023-01-09",
         "likes": 0,
         "logo": "img/mcdonalds-png-logo-simple-m-1.png",
         "img1": "",
@@ -82,7 +82,7 @@
     {
         "name": "ovvi",
         "type": "restaurant",
-        "created_at": "2023/01/09",
+        "created_at": "2023-01-09",
         "likes": 0,
         "logo": "img/ovvi.png",
         "img1": "",
@@ -92,7 +92,7 @@
     {
         "name": "Steak House",
         "type": "restaurant",
-        "created_at": "2023/01/11",
+        "created_at": "2023-01-11",
         "likes": 0,
         "logo": "img/steakhou.png",
         "img1": "",
@@ -102,7 +102,7 @@
     {
         "name": "A.O.K",
         "type": "restaurant",
-        "created_at": "2023/01/10",
+        "created_at": "2023-01-10",
         "likes": 0,
         "logo": "img/aok.png",
         "img1": "",
@@ -112,7 +112,7 @@
     {
         "name": "Myazu",
         "type": "restaurant",
-        "created_at": "2023/01/18",
+        "created_at": "2023-01-18",
         "likes": 0,
         "logo": "img/myazu.png",
         "img1": "",
@@ -122,7 +122,7 @@
     {
         "name": "Section-B",
         "type": "restaurant",
-        "created_at": "2023/01/19",
+        "created_at": "2023-01-19",
         "likes": 0,
         "logo": "img/sectionb.jpeg",
         "img1": "",
@@ -132,7 +132,7 @@
     {
         "name": "Dominos Pizza",
         "type": "restaurant",
-        "created_at": "2023/01/20",
+        "created_at": "2023-01-20",
         "likes": 0,
         "logo": "img/dominos_logo.jpeg",
         "img1": "",
@@ -142,7 +142,7 @@
     {
         "name": "Nooa",
         "type": "restaurant",
-        "created_at": "2023/01/20",
+        "created_at": "2023-01-20",
         "likes": 0,
         "logo": "img/nooa.jpeg",
         "img1": "",
