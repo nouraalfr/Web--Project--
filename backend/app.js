@@ -10,6 +10,7 @@ const coll = db.collection('places');
 
 app.use(express.json());
 app.use(express.static('..'));
+app.use(express.urlencoded({ extended: true }));
 
 // Get cafes and restaurants
 app.get('/api', async (req, res) => {
@@ -41,7 +42,6 @@ app.post('/api/rate', async (req, res) => {
   try {
     const placeName = req.body.name;
     const like = req.body.like === true;
-    console.log(like);
     if (like) {
       await coll.updateOne({ name: placeName }, { $inc: { likes: 1 } });
     } else {
@@ -49,6 +49,20 @@ app.post('/api/rate', async (req, res) => {
     }
   } catch {
     res.send('invalid request');
+    return;
+  }
+  res.send('success');
+});
+
+app.post('/api/review', async (req, res) => {
+  try {
+    const placeName = req.body.name;
+    const reviewer = req.body.reviewer;
+    const review = req.body.review;
+    await coll.updateOne({ name: placeName }, { $push: { reviews: { reviewer, review } } });
+  } catch {
+    res.send('invalid request');
+    return;
   }
   res.send('success');
 });

@@ -67,7 +67,6 @@
     </nav>
 
     <div class="container">
-
         <div class="d-flex justify-content-between mb-3 mt-2">
             <div>
                 <h2 id="title"></h2>
@@ -114,8 +113,27 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-    </div>
 
+        <div class="mt-5">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <form onsubmit="review(); return false;">
+                        <div class="mb-3">
+                            <label class="form-label">Your Name</label>
+                            <input id="reviewerInput" type="text" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Review</label>
+                            <textarea id="reviewInput" class="form-control" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <h3>Reviews</h3>
+            <div id="reviews" class="mt-3"></div>
+        </div>
+    </div>
 
     <div class="footer-basic mt-5">
         <footer>
@@ -150,6 +168,23 @@
                 img2.src = item.img1
                 const img3 = document.getElementById('img3')
                 img3.src = item.img2
+                const reviews = document.getElementById('reviews')
+                item.reviews.forEach((review) => {
+                    const card = document.createElement('div')
+                    card.classList = 'card w-100 mb-3'
+                    const cardBody = document.createElement('div')
+                    cardBody.classList = 'card-body'
+                    const cardText = document.createElement('p')
+                    cardText.classList = 'card-text'
+                    cardText.innerText = review.review
+                    const cardFooter = document.createElement('footer')
+                    cardFooter.classList = 'blockquote-footer mb-0'
+                    cardFooter.innerText = review.reviewer
+                    cardBody.appendChild(cardText)
+                    cardBody.appendChild(cardFooter)
+                    card.appendChild(cardBody)
+                    reviews.appendChild(card)
+                })
             })
 
         function rate(like) {
@@ -157,6 +192,18 @@
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({like: like, name: urlSearchParams.get('name')})
+            }).then(() => {
+                location.reload()
+            })
+        }
+
+        function review() {
+            const reviewer = document.getElementById('reviewerInput').value
+            const review = document.getElementById('reviewInput').value
+            fetch('api/review', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({reviewer: reviewer, review: review, name: urlSearchParams.get('name')})
             }).then(() => {
                 location.reload()
             })

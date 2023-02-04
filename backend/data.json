@@ -6,7 +6,8 @@
         "likes": 0,
         "logo": "img/Starbucks.png",
         "img1": "https://payload.cargocollective.com/1/12/414523/13850790/6N9A8511_s_1340_c.jpg",
-        "img2": "https://payload.cargocollective.com/1/12/414523/13850790/6N9A8471_s_1340_c.jpg"
+        "img2": "https://payload.cargocollective.com/1/12/414523/13850790/6N9A8471_s_1340_c.jpg",
+        "reviews": []
     },
     {
         "name": "BTW",
@@ -15,7 +16,8 @@
         "likes": 0,
         "logo": "img/BTW.jpg",
         "img1": "",
-        "img2": ""
+        "img2": "",
+        "reviews": []
     },
     {
         "name": "Half Million",
@@ -24,7 +26,8 @@
         "likes": 0,
         "logo": "img/Half Millon.jpg",
         "img1": "",
-        "img2": ""
+        "img2": "",
+        "reviews": []
     },
     {
         "name": "Dunkin' Dounts",
@@ -33,7 +36,8 @@
         "likes": 0,
         "logo": "img/dunkin.png",
         "img1": "",
-        "img2": ""
+        "img2": "",
+        "reviews": []
     },
     {
         "name": "Third",
@@ -42,7 +46,8 @@
         "likes": 0,
         "logo": "img/third.png",
         "img1": "",
-        "img2": ""
+        "img2": "",
+        "reviews": []
     },
     {
         "name": "Coyard",
@@ -51,7 +56,8 @@
         "likes": 0,
         "logo": "img/coyard.png",
         "img1": "",
-        "img2": ""
+        "img2": "",
+        "reviews": []
     },
     {
         "name": "777 Burger",
@@ -60,7 +66,8 @@
         "likes": 0,
         "logo": "img/Logo-Burger-777.png",
         "img1": "",
-        "img2": ""
+        "img2": "",
+        "reviews": []
     },
     {
         "name": "McDonalds",
@@ -69,7 +76,8 @@
         "likes": 0,
         "logo": "img/mcdonalds-png-logo-simple-m-1.png",
         "img1": "",
-        "img2": ""
+        "img2": "",
+        "reviews": []
     },
     {
         "name": "ovvi",
@@ -78,7 +86,8 @@
         "likes": 0,
         "logo": "img/ovvi.png",
         "img1": "",
-        "img2": ""
+        "img2": "",
+        "reviews": []
     },
     {
         "name": "Steak House",
@@ -87,7 +96,8 @@
         "likes": 0,
         "logo": "img/steakhou.png",
         "img1": "",
-        "img2": ""
+        "img2": "",
+        "reviews": []
     },
     {
         "name": "A.O.K",
@@ -96,7 +106,8 @@
         "likes": 0,
         "logo": "img/aok.png",
         "img1": "",
-        "img2": ""
+        "img2": "",
+        "reviews": []
     },
     {
         "name": "Myazu",
@@ -105,7 +116,8 @@
         "likes": 0,
         "logo": "img/myazu.png",
         "img1": "",
-        "img2": ""
+        "img2": "",
+        "reviews": []
     },
     {
         "name": "Section-B",
@@ -114,7 +126,8 @@
         "likes": 0,
         "logo": "img/sectionb.jpeg",
         "img1": "",
-        "img2": ""
+        "img2": "",
+        "reviews": []
     },
     {
         "name": "Dominos Pizza",
@@ -123,7 +136,8 @@
         "likes": 0,
         "logo": "img/dominos_logo.jpeg",
         "img1": "",
-        "img2": ""
+        "img2": "",
+        "reviews": []
     },
     {
         "name": "Nooa",
@@ -132,6 +146,7 @@
         "likes": 0,
         "logo": "img/nooa.jpeg",
         "img1": "",
-        "img2": ""
+        "img2": "",
+        "reviews": []
     }
 ]
