@@ -14,6 +14,7 @@
             min-width: 18rem;
             margin-right: 1rem;
         }
+
     </style>
 </head>
 
@@ -90,13 +91,16 @@
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script>
-        function createCard(img, title, text) {
+        function createCard(logo, title, text) {
             const card = document.createElement('div')
             card.classList = 'card'
+            const a = document.createElement('a')
+            a.href = `/details.html?name=${title}`
             const cardImg = document.createElement('img')
             cardImg.classList = 'card-img-top'
-            cardImg.src = img
-            card.appendChild(cardImg)
+            cardImg.src = logo
+            a.appendChild(cardImg)
+            card.appendChild(a)
             const cardBody = document.createElement('div')
             cardBody.classList = 'card-body'
             const cardTitle = document.createElement('h5')
@@ -112,23 +116,23 @@
 
         function searchCafes() {
             const query = document.getElementById("searchBar").value
-            fetch(`http://localhost:3000/?type=cafe&query=${query}`)
+            fetch(`api?type=cafe&query=${query}`)
                 .then((response) => response.json())
                 .then((data) => {
                     const album = document.getElementById('album')
                     album.innerHTML = ""
                     data.forEach((item) => {
-                        album.appendChild(createCard(item.img, item.name, item.text))
+                        album.appendChild(createCard(item.logo, item.name, item.likes + ' Likes'))
                     })
                 })
         }
 
-        fetch(`http://localhost:3000/?type=cafe`)
+        fetch(`api?type=cafe`)
             .then((response) => response.json())
             .then((data) => {
                 const album = document.getElementById('album')
                 data.forEach((item) => {
-                    album.appendChild(createCard(item.img, item.name, item.text))
+                    album.appendChild(createCard(item.logo, item.name, item.likes + ' Likes'))
                 })
             })
     </script>

@@ -8,21 +8,24 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <style>
         .carousel1 {
-
-            height: 20rem;
-            min-width: 100%;
             background-color: rgb(74, 74, 73);
-
         }
+
+        .carousel-inner {
+            height: 1000px;
+            max-height: 1000px;
+        }
+
     </style>
 </head>
 
 <body>
 
 
-    <nav class="navbar navbar-dark nav1 mb-3 ">
+    <nav class="navbar navbar-dark nav1 mb-3">
         <div class="container-fluid">
             <a class="navbar-brand home-logo" href="index.html">Riyadh Places</a>
             <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas"
@@ -63,36 +66,54 @@
         </div>
     </nav>
 
-    <div id="carouselExampleIndicators" class="carousel slide mt- carousel1">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img id="img" src="" class="d-block w-100" alt="...">
+    <div class="container">
+
+        <div class="d-flex justify-content-between mb-3 mt-2">
+            <div>
+                <h2 id="title"></h2>
+                <small id="likes"></small>
             </div>
-            <div class="carousel-item">
-                <img id="img" src="" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img id="img" src="" class="d-block w-100" alt="...">
+            <div>
+                <button type="button" class="btn btn-primary" onclick="rate(true);">
+                    <i class="bi bi-hand-thumbs-up me-2"></i>Like
+                </button>
+                <button type="button" class="btn btn-danger" onclick="rate(false);">
+                    <i class="bi bi-hand-thumbs-up me-2"></i>Dislike
+                </button>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+
+        <div id="carouselExampleIndicators" class="carousel slide carousel1">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img id="img1" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img id="img2" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img id="img3" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
     </div>
 
 
@@ -114,14 +135,32 @@
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script>
-        /* const urlSearchParams = new URLSearchParams(window.location.search);
-         fetch(`http://localhost:3000/?query=${urlSearchParams.get('name')}`)
-             .then((response) => response.json())
-             .then((data) => {
-                 item = data[0]
-                 const img = document.getElementById('img')
-                 img.src = item.img
-             })*/
+        const urlSearchParams = new URLSearchParams(window.location.search);
+        fetch(`api?query=${urlSearchParams.get('name')}`)
+            .then((response) => response.json())
+            .then((data) => {
+                item = data[0]
+                const title = document.getElementById('title')
+                title.innerText = item.name
+                const likes = document.getElementById('likes')
+                likes.innerText = item.likes + ' Likes'
+                const img1 = document.getElementById('img1')
+                img1.src = item.logo
+                const img2 = document.getElementById('img2')
+                img2.src = item.img1
+                const img3 = document.getElementById('img3')
+                img3.src = item.img2
+            })
+
+        function rate(like) {
+            fetch('api/rate', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({like: like, name: urlSearchParams.get('name')})
+            }).then(() => {
+                location.reload()
+            })
+        }
     </script>
 </body>
 

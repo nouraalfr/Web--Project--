@@ -32,6 +32,7 @@
             min-width: 18rem;
             margin-right: 1rem;
         }
+
     </style>
 </head>
 
@@ -128,8 +129,6 @@
 
 
 
-
-
     <div class="footer-basic mt-5">
         <footer>
             <div class="social">
@@ -149,14 +148,14 @@
     <script src="js/bootstrap.bundle.min.js"></script>
 
     <script>
-        function createCard(img, title, text) {
+        function createCard(logo, title, text) {
             const card = document.createElement('div')
             card.classList = 'card'
             const a = document.createElement('a')
             a.href = `/details.html?name=${title}`
             const cardImg = document.createElement('img')
             cardImg.classList = 'card-img-top'
-            cardImg.src = img
+            cardImg.src = logo
             a.appendChild(cardImg)
             card.appendChild(a)
             const cardBody = document.createElement('div')
@@ -173,30 +172,30 @@
         }
 
 
-        fetch('http://localhost:3000/?rating=5&limit=10')
+        fetch('api?sort=top&limit=10')
             .then((response) => response.json())
             .then((data) => {
                 const cafesElement = document.getElementById('topPlaces')
                 data.forEach((item) => {
-                    cafesElement.appendChild(createCard(item.img, item.name, item.text))
+                    cafesElement.appendChild(createCard(item.logo, item.name, item.likes + ' Likes'))
                 })
             })
 
-        fetch('http://localhost:3000/?type=cafe&limit=10')
+        fetch('api?type=cafe&limit=10')
             .then((response) => response.json())
             .then((data) => {
                 const cafesElement = document.getElementById('latestCafes')
                 data.forEach((item) => {
-                    cafesElement.appendChild(createCard(item.img, item.name, item.text))
+                    cafesElement.appendChild(createCard(item.logo, item.name, item.likes + ' Likes'))
                 })
             })
 
-        fetch('http://localhost:3000/?type=restaurant&limit=10')
+        fetch('api?type=restaurant&limit=10')
             .then((response) => response.json())
             .then((data) => {
                 const cafesElement = document.getElementById('latestRestaurants')
                 data.forEach((item) => {
-                    cafesElement.appendChild(createCard(item.img, item.name, item.text))
+                    cafesElement.appendChild(createCard(item.logo, item.name, item.likes + ' Likes'))
                 })
             })
     </script>
