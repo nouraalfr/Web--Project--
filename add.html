@@ -11,28 +11,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 
     <style>
-        .row-1 {
-            text-align: center;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            color: rgb(0, 0, 0);
+        .form {
+            padding-bottom: 60px;
+            font-weight: bold;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
 
-        .icons {
-            text-align: center;
-            margin-top: 50px;
+        .button {
+            background-color: rgba(214, 148, 148, 0.873);
+            border-radius: 10px;
+            font-weight: 600;
         }
 
-        .section-1 {
-            padding: 10px;
-            background-color: rgba(251, 178, 178, 0.171);
+        .button1:hover {
+            background-color: rgba(215, 156, 156, 0.708);
+            border-radius: 10px;
         }
-
-        .card {
-            width: 18rem;
-            min-width: 18rem;
-            margin-right: 1rem;
-        }
-
     </style>
 </head>
 
@@ -69,21 +63,16 @@
                             <a class="nav-link side-baritems" href="restaurants.html">Restaurants</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link side-baritems" href="add.html"><em>Add a New Place</em></a>
+                            <a class="nav-link side-baritems" href="add.html">Add a New Place</a>
                         </li>
                     </ul>
-                    <form class="d-flex mt-3" role="search">
-                        <input class="form-control me-2" style="height: 30px;" type="search" placeholder="Search"
-                            aria-label="Search">
-                        <button class="btn  btn1" type="submit">Search</button>
-                    </form>
                 </div>
             </div>
         </div>
     </nav>
 
 
-    <div class="container">
+    <div class="container form">
         <form onsubmit="add(); return false;">
             <div class="mb-3">
                 <label class="form-label">Type</label>
@@ -105,13 +94,13 @@
                 <input id="img1" type="url" class="form-control mb-1" placeholder="Photo of the place" required>
                 <input id="img2" type="url" class="form-control mb-1" placeholder="Photo of the place" required>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class=" button1 btn button ">Submit</button>
         </form>
     </div>
 
 
 
-    <div class="footer-basic mt-5">
+    <div class="footer-basic mt-5 foot">
         <footer>
             <div class="social">
                 <a href="#"><i class="icon ion-social-instagram"></i></a>
@@ -139,8 +128,8 @@
             const img2 = document.getElementById('img2').value
             fetch('api/add', {
                 method: 'POST',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({type, name, logo, img1, img2})
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ type, name, logo, img1, img2 })
             }).then(() => {
                 location.replace('/')
             })
