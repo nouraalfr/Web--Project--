@@ -7,7 +7,8 @@
         "logo": "img/Starbucks.png",
         "img1": "https://payload.cargocollective.com/1/12/414523/13850790/6N9A8511_s_1340_c.jpg",
         "img2": "https://payload.cargocollective.com/1/12/414523/13850790/6N9A8471_s_1340_c.jpg",
-        "reviews": []
+        "reviews": [],
+        "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58002.02717774971!2d46.783680645691184!3d24.688170986806405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f0402622468db%3A0x824bc0e9a2bcd0bf!2z2LPYqtin2LHYqNmD2LM!5e0!3m2!1sar!2ssa!4v1675665581147!5m2!1sar!2ssa"
     },
     {
         "name": "BTW",
@@ -17,7 +18,8 @@
         "logo": "img/BTW.jpg",
         "img1": "",
         "img2": "",
-        "reviews": []
+        "reviews": [],
+        "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d232020.80338464465!2d46.802826722704125!3d24.68135036205932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f032d8b20fdb3%3A0xa0e48f5298eb4e9e!2sBTW%20-%20By%20The%20Way%20(downtown)!5e0!3m2!1sar!2ssa!4v1675668364821!5m2!1sar!2ssa"
     },
     {
         "name": "Half Million",
@@ -27,7 +29,8 @@
         "logo": "img/Half Millon.jpg",
         "img1": "",
         "img2": "",
-        "reviews": []
+        "reviews": [],
+        "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3625.0198080846826!2d46.67375179999998!3d24.691845800000017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2ee3fb10a10a41%3A0x903a34abf6003400!2z2YfYp9mBINmF2YTZitmI2YY!5e0!3m2!1sar!2ssa!4v1675668463000!5m2!1sar!2ssa"
     },
     {
         "name": "Dunkin' Dounts",
@@ -37,7 +40,8 @@
         "logo": "img/dunkin.png",
         "img1": "",
         "img2": "",
-        "reviews": []
+        "reviews": [],
+        "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d211434.9358956706!2d46.803451938652344!3d24.680889675612274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f011d1de0df9f%3A0xa194aa0b8b6edbda!2z2K_Yp9mG2YPZhg!5e0!3m2!1sar!2ssa!4v1675668111874!5m2!1sar!2ssa"
     },
     {
         "name": "Third",
@@ -47,7 +51,8 @@
         "logo": "img/third.png",
         "img1": "",
         "img2": "",
-        "reviews": []
+        "reviews": [],
+        "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.013135767004!2d46.718295821220956!3d24.76073875542437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2efd8708d53407%3A0xe8c94bf29ed1c8e7!2z2YPYp9mB2YrZhyDYq9mK2LHYrw!5e0!3m2!1sar!2ssa!4v1675668570948!5m2!1sar!2ssa"
     },
     {
         "name": "Coyard",
@@ -57,7 +62,8 @@
         "logo": "img/coyard.png",
         "img1": "",
         "img2": "",
-        "reviews": []
+        "reviews": [],
+        "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57990.29661304538!2d46.750700980694276!3d24.71336617662803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03dee2e6f84d%3A0x77f6566349bf8cd8!2z2YPZiNmK2KfYsdiv!5e0!3m2!1sar!2ssa!4v1675668619022!5m2!1sar!2ssa"
     },
     {
         "name": "777 Burger",
@@ -67,7 +73,8 @@
         "logo": "img/Logo-Burger-777.png",
         "img1": "",
         "img2": "",
-        "reviews": []
+        "reviews": [],
+        "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.0846489681003!2d46.67690562122109!3d24.758286655521676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2efd4c0583f27b%3A0xf4ff04a4855105d4!2zNzc3INio2LHYrNixINmF2LTZiNmK!5e0!3m2!1sar!2ssa!4v1675669989759!5m2!1sar!2ssa"
     },
     {
         "name": "McDonalds",
@@ -77,7 +84,8 @@
         "logo": "img/mcdonalds-png-logo-simple-m-1.png",
         "img1": "",
         "img2": "",
-        "reviews": []
+        "reviews": [],
+        "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.964207565224!2d46.6063419!3d24.6937571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f1e6bd2f3addb%3A0x737983408afd6306!2z2YXYp9mD2K_ZiNmG2KfZhNiv2LI!5e0!3m2!1sar!2ssa!4v1675670431062!5m2!1sar!2ssa"
     },
     {
         "name": "ovvi",
@@ -87,7 +95,8 @@
         "logo": "img/ovvi.png",
         "img1": "",
         "img2": "",
-        "reviews": []
+        "reviews": [],
+        "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.008319305034!2d46.64619242122173!3d24.726594656778502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f1d22b27cc5a1%3A0x5d7553fa00be5986!2z2KfZiNmB2Yo!5e0!3m2!1sar!2ssa!4v1675670033968!5m2!1sar!2ssa"
     },
     {
         "name": "Steak House",
@@ -97,7 +106,8 @@
         "logo": "img/steakhou.png",
         "img1": "",
         "img2": "",
-        "reviews": []
+        "reviews": [],
+        "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28981.4908803601!2d46.69211216044921!3d24.771940600000008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2efd321127909f%3A0x3386461d21c17d6d!2z2LPYqtmK2YMg2YfYp9mI2LM!5e0!3m2!1sar!2ssa!4v1675670079689!5m2!1sar!2ssa"
     },
     {
         "name": "A.O.K",
@@ -107,7 +117,8 @@
         "logo": "img/aok.png",
         "img1": "",
         "img2": "",
-        "reviews": []
+        "reviews": [],
+        "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.0205524968665!2d46.64267432122108!3d24.760484455434483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2ee30f1492e94f%3A0xbe7979fb99a6494f!2z2KfZiNmD2Yo!5e0!3m2!1sar!2ssa!4v1675670109063!5m2!1sar!2ssa"
     },
     {
         "name": "Myazu",
@@ -117,7 +128,8 @@
         "logo": "img/myazu.png",
         "img1": "",
         "img2": "",
-        "reviews": []
+        "reviews": [],
+        "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.7865311554087!2d46.7049361!3d24.6998639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f030b790b8bf1%3A0x74edaa5821a6451!2z2YXZitin2LLZiA!5e0!3m2!1sar!2ssa!4v1675670137064!5m2!1sar!2ssa"
     },
     {
         "name": "Section-B",
@@ -127,7 +139,8 @@
         "logo": "img/sectionb.jpeg",
         "img1": "",
         "img2": "",
-        "reviews": []
+        "reviews": [],
+        "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.0741619859473!2d46.608113321221076!3d24.75864625550741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2ee352b84aa5e7%3A0xdcaefb5056d965fc!2z2YXYt9i52YUg2LPZg9i02YYg2KjZig!5e0!3m2!1sar!2ssa!4v1675670154063!5m2!1sar!2ssa"
     },
     {
         "name": "Dominos Pizza",
@@ -137,7 +150,8 @@
         "logo": "img/dominos_logo.jpeg",
         "img1": "",
         "img2": "",
-        "reviews": []
+        "reviews": [],
+        "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53342.920307228254!2d46.64102441040947!3d24.75773591455434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2ee2368ebcfbcd%3A0x58cfd5695744362a!2z2K_ZiNmF2YrZhtmI2LIg2KjZitiq2LLYpw!5e0!3m2!1sar!2ssa!4v1675670253171!5m2!1sar!2ssa"
     },
     {
         "name": "Nooa",
@@ -147,6 +161,7 @@
         "logo": "img/nooa.jpeg",
         "img1": "",
         "img2": "",
-        "reviews": []
+        "reviews": [],
+        "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3625.0324776149587!2d46.63551322122245!3d24.691410258172155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f1d2e12b1eae3%3A0xbf438278a751fe75!2z2YbZiNin!5e0!3m2!1sar!2ssa!4v1675670280230!5m2!1sar!2ssa"
     }
 ]
