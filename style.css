@@ -1,12 +1,12 @@
 html,
-body {
-    height: 100%;
-}
+
 
 /* body as grid so footer is always at the bottom */
 body {
+    height: 100%;
     display: grid;
     grid-template-rows: auto 1fr auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body>.navbar {
@@ -42,8 +42,8 @@ body>.footer-basic {
 }
 
 .side-baritems {
-    color: black;
-    font-weight: 500;
+    color: rgb(232, 145, 145);
+    font-weight: 600;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
     padding-bottom: 5px;
@@ -52,7 +52,7 @@ body>.footer-basic {
 }
 
 .side-baritems:hover {
-    color: black;
+    color: rgb(232, 145, 145);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 21px;
     background-color: rgba(255, 255, 255, 0.719);
@@ -70,7 +70,6 @@ body {
     text-align: center;
     height: 30px;
     width: 075px;
-
 }
 
 .btn1:hover {
@@ -82,7 +81,6 @@ body {
     padding: 40px 0;
     background-color: rgba(246, 202, 202, 0.79);
     color: rgb(217, 76, 48);
-
 }
 
 .footer-basic ul {
