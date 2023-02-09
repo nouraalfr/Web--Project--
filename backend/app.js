@@ -12,6 +12,45 @@ app.use(express.json());
 app.use(express.static('..'));
 app.use(express.urlencoded({ extended: true }));
 
+
+
+// app.get('/get_contact', function (req,res) {
+// let respnse={
+//   name:req.query.name,
+//   mail:req.query.mail,
+//   phone:req.query.phone
+// };
+// console.log(respnse);
+// res.end(JSON.stringify(respnse));
+
+// });
+
+// app.listen(3000, function( ) {
+//   console.log('Example app listening on port 3000!');
+// });
+
+
+// var express = require('express');
+// var app = express();
+var bodyparser = require('body-parser');
+const { json } = require('express');
+var urlencodedParser=bodyparser.urlencoded({extended:false});
+
+ app.post('/post_contact' , urlencodedParser, function (req,res){
+  let respnse={
+    name:req.body.name,
+     mail:req.body.mail,
+     phone:req.body.phone
+   };
+   console.log(respnse);
+   res.end(json.stringify(respnse));
+ });
+
+ app.listen(3000, function () {
+   console.log('Example app listening on port 3000!');
+ });
+
+
 // Get cafes and restaurants
 app.get('/api', async (req, res) => {
   // If request has query then use it to filter results
