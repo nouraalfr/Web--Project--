@@ -28,6 +28,8 @@ index.html
 app.js
 
 4. Business Logic:
+
+
 Our database structure has one collection ‘places’ and we can filter the data by the type, we have two type cafes and restaurants. The collection has name, type ,date of creation, likes, images , reviews and location.
 
 When the backend first starts we do ‘collection.createIndex({name: ‘text’})’  so we can use ‘$search’ on the name field to make searching easier. Then we read items from a JSON file and do collection.insertMany() to insert the data into Mongo.
