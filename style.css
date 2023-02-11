@@ -1,9 +1,10 @@
-html,
-
-
 /* body as grid so footer is always at the bottom */
+html,
 body {
     height: 100%;
+}
+
+body {
     display: grid;
     grid-template-rows: auto 1fr auto;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
