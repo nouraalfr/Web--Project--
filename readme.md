@@ -20,12 +20,26 @@ Bootstrap: https://getbootstrap.com/
 
 3. Dynamic Components: 
 File names the include JavaScript:
+
+
 add.html 
+
+
 cafes.html 
+
+
 details.html
+
+
 restaurants.html
+
+
 index.html
+
+
 app.js
+
+
 
 4. Business Logic:
 
@@ -48,23 +62,35 @@ References:
 MongoDB documentation
 https://www.mongodb.com/docs/drivers/node/current/
 
+
+
 Node express documentation 
 https://expressjs.com/en/starter/installing.html 
 https://expressjs.com/en/guide/routing.html 
 
+
+
 Using the Fetch API
 https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch 
+
+
 
 async function
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
 
+
+
 URL Search Params
 https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams
+
+
 
 https://stackoverflow.com/a/10007542 
 
 Reading file with NodeJS
 https://nodejs.org/api/fs.html#fsreadfilesyncpath-options
+
+
 
 Bootstrap for style
 https://getbootstrap.com/ 
