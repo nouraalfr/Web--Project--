@@ -32,23 +32,23 @@ app.use(express.urlencoded({ extended: true }));
 
 // var express = require('express');
 // var app = express();
-var bodyparser = require('body-parser');
-const { json } = require('express');
-var urlencodedParser=bodyparser.urlencoded({extended:false});
+// var bodyparser = require('body-parser');
+// const { json } = require('express');
+// var urlencodedParser=bodyparser.urlencoded({extended:false});
 
- app.post('/post_contact' , urlencodedParser, function (req,res){
-  let respnse={
-    name:req.body.name,
-     mail:req.body.mail,
-     phone:req.body.phone
-   };
-   console.log(respnse);
-   res.end(json.stringify(respnse));
- });
+//  app.post('/post_contact' , urlencodedParser, function (req,res){
+//   let respnse={
+//     name:req.body.name,
+//      mail:req.body.mail,
+//      phone:req.body.phone
+//    };
+//    console.log(respnse);
+//    res.end(json.stringify(respnse));
+//  });
 
- app.listen(3000, function () {
-   console.log('Example app listening on port 3000!');
- });
+//  app.listen(3000, function () {
+//    console.log('Example app listening on port 3000!');
+//  });
 
 
 // Get cafes and restaurants
@@ -134,14 +134,14 @@ app.listen(port, async () => {
   // delete database at start
   try {
     await coll.drop();
-  } catch {}
+  } catch { }
   // create index for name field so we can search
   await coll.createIndex({ name: 'text' });
   await insertItems();
   console.log(`Backend listening on port ${port}`);
 });
 
-async function insertItems () {
+async function insertItems() {
   // Read data from file
   const data = JSON.parse(fs.readFileSync('data.json'));
   // Insert data into mongodb
