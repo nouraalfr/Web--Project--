@@ -97,10 +97,15 @@
     </nav>
 
     <div class="container">
-        <form method="post" action="/login" class="form">
+        <form method="post" action="/register" class="form">
             <div class="mb-3">
                 <label class="form-label">Username</label>
                 <input class="form-control" type="text" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" required>
             </div>
 
             <div class="mb-3">
@@ -108,8 +113,7 @@
                 <input type="password" class="form-control" required>
             </div>
 
-            <button type="submit" class=" button1 btn button ">Log in</button>
-            <a type="submit" class=" button1 btn button " href="register.html">Register</a>
+            <button type="submit" class=" button1 btn button ">Submit</button>
         </form>
     </div>
 
