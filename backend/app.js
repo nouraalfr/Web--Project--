@@ -10,7 +10,7 @@ const coll = db.collection('places');
 
 app.use(express.json());
 app.use(express.static('..'));
-app.use(express.urlencoded({ extended: true }));
+
 
 
 
