@@ -5,16 +5,18 @@
 
 In this project, we created Riyadh Places website, Riyadh Places is a blog about Cafes and restaurants, in our blog you can find the top cafes and restaurant also you can find the latest of them, where you can share your reviews about the places and rate them, also, you can add a place too. Our blog is for anyone who’s passionate about food places and like to know what’s new in Riyadh.
 
-2. Look & Feel  
+
+1. Flow Chart: 
+
+<img width="451" alt="image" src="https://user-images.githubusercontent.com/75739484/218278639-d7f99ef2-fcb8-4c95-9e9a-8e7776e81e3f.png">
+
+2. Look & Feel:
 Our blog website chooses light colors and bold fonts to make it easier for users to read and go through the pages. We also choose creating cards to display our places to make it fun and easy to use. Included navigation bar with sidebar that include the pages to make it easier to move through the pages.
 References for HTML and CSS: 
 Bootstrap: https://getbootstrap.com/ 
 
-1. Flow Chart  
-2. 
-<img width="451" alt="image" src="https://user-images.githubusercontent.com/75739484/218278639-d7f99ef2-fcb8-4c95-9e9a-8e7776e81e3f.png">
 
-3. Dynamic Components 
+3. Dynamic Components: 
 File names the include JavaScript:
 add.html 
 cafes.html 
@@ -23,7 +25,7 @@ restaurants.html
 index.html
 app.js
 
-4. Business Logic 
+4. Business Logic:
 Our database structure has one collection ‘places’ and we can filter the data by the type, we have two type cafes and restaurants. The collection has name, type ,date of creation, likes, images , reviews and location.
 
 When the backend first starts we do ‘collection.createIndex({name: ‘text’})’  so we can use ‘$search’ on the name field to make searching easier. Then we read items from a JSON file and do collection.insertMany() to insert the data into Mongo.
@@ -36,7 +38,7 @@ The POST route ‘/api/add’ takes a JSON as well with information about a new 
 Returns all items in the collection with the filter, sorting and limit specified in the query.
 
 
-References
+References:
 MongoDB documentation
 https://www.mongodb.com/docs/drivers/node/current/
 
