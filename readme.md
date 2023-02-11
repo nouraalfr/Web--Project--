@@ -12,6 +12,8 @@ In this project, we created Riyadh Places website, Riyadh Places is a blog about
 
 2. Look & Feel:
 Our blog website chooses light colors and bold fonts to make it easier for users to read and go through the pages. We also choose creating cards to display our places to make it fun and easy to use. Included navigation bar with sidebar that include the pages to make it easier to move through the pages.
+
+
 References for HTML and CSS: 
 Bootstrap: https://getbootstrap.com/ 
 
